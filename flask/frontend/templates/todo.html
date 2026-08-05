@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>todo form</title>
+</head>
+<body>
+    <h1>Welcome to todo form App</h1>
+    <p>This is a simple Flask app.</p>
+    <div class="center">
+        <form action="/submittodoitem" method="post">
+            <label for="item Name">Item Name:</label>
+            <input type="text" id="item_Name" name="item_Name" required>
+            <label for="item Description">Item Description:</label>
+            <input type="text" id="item_Description" name="item_Description" required>
+            <input type="submit" value="Add_Todo">
+        </form>
+    </div>
+</body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin-top: 50px;
+    }
+    .center {
+        display: inline-block;
+        text-align: left;
+    }
+    p {
+        font-size: 18px;
+    }
+</style>
+</html>
