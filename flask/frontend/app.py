@@ -15,10 +15,10 @@ def register():
     requests.post(BACKEND_URL + '/register', json=form_data)
     return ("Data submitted successfully")
 
-@app.route('/submittodo', methods=['POST'])
+@app.route('/submittodoitem', methods=['POST'])
 def todo():
     form_data = request.form.to_dict()
-    requests.post(BACKEND_URL + '/todo', json=form_data)
+    requests.post(BACKEND_URL + '/submittodoitem', json=form_data)
     return ("todo list created successfully")
 
 if __name__ == '__main__':
