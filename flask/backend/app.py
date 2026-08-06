@@ -32,5 +32,12 @@ def view_data():
         del item["_id"]  # Remove the ObjectId field for JSON serialization
     return jsonify(data), 200
 
+@app.route('/submittodoitem', methods=['POST'])
+def submit_todo_item():
+    data = request.get_json()
+    print("received", data)
+    collection.insert_one(data)
+    return jsonify({"message": "Todo item submitted successfully"}), 201
+
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=9000, debug=True)
